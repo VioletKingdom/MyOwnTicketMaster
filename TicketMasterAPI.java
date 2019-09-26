@@ -29,9 +29,9 @@ public class TicketMasterAPI {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		String geoHash = GeoHash.encodeGeohash(lat, lon, 8);
+				// apikey=abcde&geoPoint=xyz123&keyword=&radius=50
 		// "apikey=qqPuP6n3ivMUoT9fPgLepkRMreBcbrjV&latlong=37,-120&keyword=event&radius=50"
-
 		String query = String.format("apikey=%s&latlong=%s,%s&keyword=%s&radius=%s", API_KEY, lat, lon, keyword, 50);
 		String url = URL + "?" + query;
 		
@@ -66,6 +66,8 @@ public class TicketMasterAPI {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+
 		return new ArrayList<>();
 	}
   
