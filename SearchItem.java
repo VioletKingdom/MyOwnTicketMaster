@@ -35,16 +35,23 @@ public class SearchItem extends HttpServlet {
 		// default line
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
+		String userId = session.getAttribute("user_id").toString();
+
 		double lat = Double.parseDouble(request.getParameter("lat"));
 		double lon = Double.parseDouble(request.getParameter("lon"));
+		
 		
 		  DBConnection connection = DBConnectionFactory.getConnection();
   	               try {
   		       List<Item> items = connection.searchItems(lat, lon, term);
+		       Set<String> favoritedItemIds = connection.getFavoriteItemIds(userId);
   		
   		      JSONArray array = new JSONArray();
   		      for (Item item : items) {
   			 array.put(item.toJSONObject());
+			 JSONObject obj = item.toJSONObject();
+			 obj.put("favorite", favoritedItemIds.contains(item.getItemId()));
+			 array.put(obj);
   		      }
   		     RpcHelper.writeJsonArray(response, array);
   		
