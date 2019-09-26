@@ -38,6 +38,23 @@ public class SearchItem extends HttpServlet {
 		double lat = Double.parseDouble(request.getParameter("lat"));
 		double lon = Double.parseDouble(request.getParameter("lon"));
 		
+		  DBConnection connection = DBConnectionFactory.getConnection();
+  	               try {
+  		       List<Item> items = connection.searchItems(lat, lon, term);
+  		
+  		      JSONArray array = new JSONArray();
+  		      for (Item item : items) {
+  			 array.put(item.toJSONObject());
+  		      }
+  		     RpcHelper.writeJsonArray(response, array);
+  		
+  	              } catch (Exception e) {
+  		   e.printStackTrace();
+  	              } finally {
+  		 connection.close();
+  	              }
+
+		
 		TicketMasterAPI tmAPI = new TicketMasterAPI();
 		List<Item> items = tmAPI.search(lat, lon, null);
 		
