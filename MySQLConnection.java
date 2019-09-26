@@ -46,12 +46,44 @@ private Connection conn;
 	@Override
 	public void setFavoriteItems(String userId, String itemId) {
 		// TODO Auto-generated method stub
+		  if (conn == null) {
+  		 System.err.println("DB connection failed");
+  		 return;
+  	       }
+  	
+  	      try {
+  		 String sql = "INSERT IGNORE INTO history(user_id, item_id) VALUES (?, ?)";
+  		 PreparedStatement ps = conn.prepareStatement(sql);
+  		 ps.setString(1, userId);
+                              ps.setString(2, itemId);
+                              ps.execute();
+  	       } catch (Exception e) {
+  		 e.printStackTrace();
+  	       }
+
 		
 	}
 
 	@Override
 	public void unsetFavoriteItems(String userId, String itemId) {
 		// TODO Auto-generated method stub
+		       if (conn == null) {
+  		 System.err.println("DB connection failed");
+  		 return;
+  	       }
+  	
+  	      try {
+  		 String sql = "DELETE FROM history WHERE user_id = ? AND item_id = ?";
+  		 PreparedStatement ps = conn.prepareStatement(sql);
+  		 ps.setString(1, userId);
+  	               ps.setString(2, itemId);
+  		ps.execute();
+  		 
+  	       } catch (Exception e) {
+  		 e.printStackTrace();
+  	       }
+
+
 		
 	}
 
