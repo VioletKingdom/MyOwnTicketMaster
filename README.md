@@ -12,4 +12,4 @@ Created Java servlets with RESTful APIs to handle HTTP requests and responses.
 Used MySQL to store real business data (price, location, category, etc.) and migrated to NoSQL database
 (MongoDB) for better scalability.
 
-Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter.
+Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter. 
