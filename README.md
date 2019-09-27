@@ -13,3 +13,5 @@ on search history and favorite records.
 (MongoDB) for better scalability.
 
 - Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter. 
+
+![alt text](https://imgur.com/IYHT4e4)
