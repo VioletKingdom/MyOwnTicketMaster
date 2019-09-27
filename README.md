@@ -14,6 +14,7 @@ on search history and favorite records.
 
 - Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter. 
 
+These pictures are how the webpages look like.
 ![alt text](https://i.ibb.co/9mxm8d3/Capture2.jpg)
 ![alt text](https://i.ibb.co/84sStq0/Capture3.jpg)
 ![alt text](https://i.ibb.co/ncV9tDg/Capture4.jpg)
