@@ -14,4 +14,4 @@ on search history and favorite records.
 
 - Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter. 
 
-![alt text]([img]https://i.imgur.com/IYHT4e4.jpg[/img])
+![alt text](<blockquote class="imgur-embed-pub" lang="en" data-id="IYHT4e4"><a href="https://imgur.com/IYHT4e4">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
