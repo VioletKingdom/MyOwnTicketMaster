@@ -1,4 +1,4 @@
-# MyOwnTicketMaster
+# My Own Ticket Master
 Java Web Service Development - Event Search and Personalized Ticket Recommendation
 
 - Designed and implemented an interactive web page (HTML/CSS/JavaScript/AJAX) for users to search events
