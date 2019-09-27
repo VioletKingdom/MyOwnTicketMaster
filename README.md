@@ -14,4 +14,4 @@ on search history and favorite records.
 
 - Deployed to Amazon EC2 to handle 150 queries per second tested by Apache JMeter. 
 
-![alt text](https://github.com/VioletKingdom/MyOwnTicketMaster/Capture2.JPG)
+![alt text](https://i.ibb.co/9mxm8d3/Capture2.jpg)
